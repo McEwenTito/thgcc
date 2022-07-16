@@ -9,6 +9,7 @@ calender_page = CalenderPage(browser)
 
 
 def drop_calender():
+    time.sleep(2)
     calender_page.calender_dropdown.click()
 
 
