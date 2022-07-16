@@ -22,7 +22,7 @@ def convert_to_date(date_element):
 
 def get_next_sunday() -> datetime.datetime:
     today = datetime.datetime.now().date()
-    d = datetime.timedelta(days=14)
+    d = datetime.timedelta(days=12)
     print(today)
     print(today+d)
     return today+d
