@@ -41,7 +41,7 @@ def add_members(members):
     for member in members:
         add_member(member)
     logging.info(f"finished: {booking_page.finish.text}")
-    booking_page.finish.click()
+    # booking_page.finish.click()
 
 
 

@@ -1,6 +1,7 @@
 import logging
 import time
 import selenium
+import sys
 
 
 from actions import base_actions, login_actions, home_actions, consent_actions, calender_actions, booking_actions
@@ -29,6 +30,6 @@ def run(user, players):
 
 if __name__ == '__main__':
     print("We are running!")
-    run("joe", config.PLAYERS2)
+    run(sys.argv[1], config.PLAYERS[sys.argv[2]])
 
 
