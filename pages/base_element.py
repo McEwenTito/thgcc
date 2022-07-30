@@ -16,13 +16,13 @@ class BaseElement(object):
 
     def find(self):
         try:
-            element = WebDriverWait(self.driver, 10).until(
+            element = WebDriverWait(self.driver, 1).until(
                 EC.visibility_of_element_located(locator=self.locator)
             )
 
             logging.info(f"Found Element with text: {element.text}")
 
-            elements = WebDriverWait(self.driver, 10).until(
+            elements = WebDriverWait(self.driver, 0).until(
                 EC.visibility_of_all_elements_located(locator=self.locator)
             )
             logging.info(f"Found Elements with text: {[element.text for element in elements]}")
@@ -41,7 +41,7 @@ class BaseElement(object):
         return None
 
     def click(self):
-        element = WebDriverWait(self.driver, 10).until(
+        element = WebDriverWait(self.driver, 1).until(
             EC.element_to_be_clickable(mark=self.locator)
         )
         element.click()

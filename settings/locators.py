@@ -11,8 +11,9 @@ accept_code_button = "/html/body/div[2]/div/form/section/div/div/div[1]/a"
 
 #calender page locators
 calender_dropdown = "/html/body/div[2]/div[2]/div[4]/div/div[2]/form/div[1]/p/img"
+calender_dropdown = "/html/body/div[2]/div[2]/div[4]/div/div[2]/form/div[1]/p/input[1]"
 # sundays = "/html/body/div[4]/table/tbody/tr/td[7]"
-sundays = "/html/body/div[4]/table/tbody/tr/td[4]/a/.."
+sundays = "/html/body/div[4]/table/tbody/tr/td/a/.."
 next = "/html/body/div[4]/div/a[2]"
 
 days = {
