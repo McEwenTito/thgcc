@@ -16,7 +16,7 @@ class HomeActions(BaseAction):
 
 
     def book_tee_time(self):
-        self.scroll_down_page(500)
+        self.scroll_down_page(800)
         time.sleep(5)
         book_tee = self.browser.find_element("link text","Book a tee time")
         print(book_tee)

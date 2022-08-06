@@ -11,12 +11,12 @@ class BaseElement(object):
         self.locator = locator
 
         self.web_element = None
-        self.web_elements = None
+        self.web_elements = []
         self.find()
 
     def find(self):
         try:
-            element = WebDriverWait(self.driver, 1).until(
+            element = WebDriverWait(self.driver, 0).until(
                 EC.visibility_of_element_located(locator=self.locator)
             )
 
@@ -28,6 +28,7 @@ class BaseElement(object):
             logging.info(f"Found Elements with text: {[element.text for element in elements]}")
             self.web_element = element
             self.web_elements = elements
+            return
 
         except Exception as e:
             logging.exception("Failed to find element")
@@ -41,10 +42,11 @@ class BaseElement(object):
         return None
 
     def click(self):
-        element = WebDriverWait(self.driver, 1).until(
+        element = WebDriverWait(self.driver, 0).until(
             EC.element_to_be_clickable(mark=self.locator)
         )
         element.click()
+        logging.info(f"clicked {self.locator} at {datetime.datetime.now()}")
         return None
 
     def attribute(self, attr_name):
