@@ -10,10 +10,16 @@ from settings import config
 class BookingPage(BasePage):
 
     url = "https://www.thgcc.co.uk/memberbooking/?date=15-07-2022&course=28&group=1"
+    #
+    # @property
+    # def select_slot(self):
+    #     locator = Locator(by=By.XPATH, value=locators.available_slot)
+    #     return BaseElement(self.driver, locator)
+    #
 
     @property
     def select_slot(self):
-        locator = Locator(by=By.XPATH, value=locators.available_slot)
+        locator = Locator(by=By.LINK_TEXT, value="Select")
         return BaseElement(self.driver, locator)
 
 

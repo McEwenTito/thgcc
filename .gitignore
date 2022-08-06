@@ -1,6 +1,7 @@
 logs
 env
 settings/secrets.py
+actions/browser.py
 *__pycache__/*
 __pycache__/
 *.pyc

@@ -44,14 +44,14 @@ def run(user, players, browser, slot):
     booking_actions = BookingActions(browser)
     booking_actions.select_available_slot(slot)
     time.sleep(1)
-    logging.info("slot selected")
+    # logging.info("slot selected")
     booking_actions.add_members(players)
     logging.info("players added")
 
 
 
 if __name__ == '__main__':
-    print("We are running!")
+    # print("We are running!")
     t1 = threading.Thread(target=run, args=["joe", config.PLAYERS["set1"], browser, 0])
     t2 = threading.Thread(target=run, args=["conor", config.PLAYERS["set2"], browser2, 1])
 
